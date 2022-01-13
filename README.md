@@ -1,7 +1,7 @@
 
 
 # Microsoft Share Monitor
-  Micsofoft Share Monitor is used to monitor file share changed. This includes permission modifications along with adding and removing share folders.
+  Microsoft Share Monitor is used to monitor file share changed. This includes permission modifications along with adding and removing share folders.
 
 
 
