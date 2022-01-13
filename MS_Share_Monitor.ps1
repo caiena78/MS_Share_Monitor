@@ -182,8 +182,6 @@ Process {
     $tempPath = Join-Path -path $basPath -ChildPath 'temp'
     $serverPath = Join-Path -path $basPath -ChildPath "servers"
 
-    #$Servers = @("smhfilep6", "smhfilep7", "its-chad")
-
     ForEach ($server in $pipelineInput) {
         $file, $filehash = GetSharInfo $server $tempPath       
         $baseFile = split-path $filehash -Leaf
@@ -197,8 +195,7 @@ Process {
             $basefileJson = split-path $file -Leaf
             $serverJson = join-path -Path $serverPath -ChildPath $basefileJson
             $diff = compareFiles $file  $serverJson
-            $diff
-            $diff | Set-Content output.txt
+            $diff            
             updateFiles @($filehash, $file) $serverPath
         }
         if ($statusCode -eq 2) {
