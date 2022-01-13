@@ -11,4 +11,5 @@
 
 # folder
    \Server - This folder holds the .json and hash files for each server.
+   
    \Temp  - This folder holds the temp .json and hash files used to compare to the files in the \Server folder.
